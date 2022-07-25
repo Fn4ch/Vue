@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-  <input type="text" :value="searchQuery" @input="updateSearchQuery" />
+  <input class="input" type="text" placeholder="Введите название" :value="searchQuery" @input="updateSearchQuery" />
     <ListOfPhotos :photos="searchedPhotos"/>
   </div>
 </template>
@@ -52,9 +52,14 @@ export default defineComponent({
 </script>
 
 <style>
-  .home{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  .home{    
+    margin-top: 60px;
+  }
+  input{
+    width: 80%;
+    max-width: 500px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 6px;
   }
 </style>

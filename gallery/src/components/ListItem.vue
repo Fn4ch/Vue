@@ -37,14 +37,12 @@ export default defineComponent({
 .grid-item{
     align-items: center;
     justify-items: center;
-    width: 200px;
-    height: 200px;
-    padding: 18px;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
 }
 img{
-    width: fit-content;
-    height: fit-content;
-    max-width: 300px;
-    max-height: 300px;    
+    max-width: 260px;
+    max-height: 260px;    
 }
 </style>

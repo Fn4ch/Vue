@@ -1,8 +1,6 @@
 <template>
     <div class="container">
-        <div>
-            <ListItem v-for="photo in photos" :photo="photo" :key="photo.id"/>
-        </div>
+        <ListItem class="box" v-for="photo in photos" :photo="photo" :key="photo.id"/>
     </div>
 </template>
 
@@ -35,13 +33,18 @@ export default defineComponent({
 })
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
 .container{
     display: grid;
-    align-items: center;
-    place-items: center;
-    justify-content: center;
     gap: 12px;
+
+    /* ! */
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.box{
+    display: grid;
+    place-items: center;
 }
     
 </style>
