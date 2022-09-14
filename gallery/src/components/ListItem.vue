@@ -33,16 +33,21 @@ export default defineComponent({
 })
 </script>
 
-<style lang="css">
+<style>
 .grid-item{
     align-items: center;
     justify-items: center;
     width: 300px;
     height: 300px;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgb(185, 185, 185);
 }
 img{
     max-width: 260px;
     max-height: 260px;    
+}
+.item-title{
+    margin-bottom: 6px;    
 }
 </style>
