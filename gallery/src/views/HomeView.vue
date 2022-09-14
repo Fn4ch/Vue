@@ -2,6 +2,7 @@
   <div class="home">
   <input class="input" type="text" placeholder=" Enter the name" :value="searchQuery" @input="updateSearchQuery" />
     <ListOfPhotos :photos="searchedPhotos"/>
+    <LoadMoreBtn />
   </div>
 </template>
 
@@ -9,12 +10,13 @@
 import { defineComponent} from 'vue';
 import { mapActions, mapMutations, mapGetters, mapState } from 'vuex';
 import ListOfPhotos from '@/components/ListOfPhotos.vue';
-import { State } from '@/store';
+import LoadMoreBtn from '@/components/LoadMoreBtn.vue';
 
 export default defineComponent({
   name: 'Photos',
   components: {
-    ListOfPhotos
+    ListOfPhotos,
+    LoadMoreBtn
   },
   methods:{       
     ...mapMutations({
@@ -27,6 +29,9 @@ export default defineComponent({
     }),
     updateSearchQuery(e: any){
       this.$store.commit('setSearchQuery', e.target.value)
+    },
+    nextPage(){
+      this.$store.commit('setPage', this.page + 1)
     }
   },
   computed:{

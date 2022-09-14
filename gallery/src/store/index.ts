@@ -70,7 +70,7 @@ export const store = createStore<State>({
         commit('setPage', state.page + 1)
         const response = await axios.get('https://jsonplaceholder.typicode.com/photos', { 
           params:{
-            _page: state.limit,
+            _page: state.page,
             _limit: state.limit
           }}        
         )      
