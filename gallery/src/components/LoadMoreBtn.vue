@@ -10,9 +10,6 @@ import { mapActions, mapGetters } from 'vuex';
 
 
 export default defineComponent({
-    props:{
-        page: {type: Number, required: true}
-    },
     methods:{
         ...mapActions({
             loadMorePhotos: 'loadMorePhotos',
