@@ -1,6 +1,4 @@
-# Pet project on vue
-
-## Image gallery
+## Image gallery (Vue)
 
 ### backend: 'https://jsonplaceholder.typicode.com'
 
