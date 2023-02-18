@@ -1,4 +1,8 @@
-# gallery
+# Pet project on vue
+
+## Image gallery
+
+### backend: 'https://jsonplaceholder.typicode.com'
 
 ## Project setup
 ```
@@ -14,6 +18,3 @@ yarn serve
 ```
 yarn build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
