@@ -24,6 +24,7 @@ const isDropOpen = ref<boolean>(false)
 .drop-menu{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     min-width: 240px;
     border-radius: 8px;
     padding: 8px 16px;
@@ -32,14 +33,19 @@ const isDropOpen = ref<boolean>(false)
     
 
     &__list{
+        margin-top: 16px;
         display: flex;
         flex-direction: column;
     }
     &__item{
         display: flex;
+        align-items: center;
         border-bottom: 1px solid $colorGrey;
         width: 100%;
         padding: 8px 0px;
+        &:last-child{
+            border-bottom: none;
+        }
     }
 }
 </style>
